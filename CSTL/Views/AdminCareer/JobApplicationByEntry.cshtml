@@ -1,0 +1,514 @@
+﻿
+@{
+    ViewBag.Title = "JobApplicationByEntry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body data-sidebar="dark">
+
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        <div class="">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-4">Product List</h4>
+                                    <div class="table-responsive">
+                                        @*<table id="dtdata" class="table align-middle table-nowrap mb-0">*@
+                                        <table id="dtdata" class="table table-bordered dt-responsive  nowrap w-100">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    @*<th style="width: 20px;">
+                                                    <div class="form-check font-size-16 align-middle">
+                                                        <input class="form-check-input" type="checkbox" id="transactionCheck01">
+                                                        <label class="form-check-label" for="transactionCheck01"></label>
+                                                    </div>
+                                                </th>*@
+                                                    <th class="align-middle">SL</th>
+                                                    <th class="align-middle">Candidate Image</th>
+                                                    <th class="align-middle">Candidate Name</th>
+                                                    <th class="align-middle">Email</th>
+                                                    <th class="align-middle">Phone</th>
+                                                    <th class="align-middle">Applied For</th>
+                                                    <th class="align-middle">Applied Date</th>
+                                                    <th class="align-middle">View Edu</th>
+                                                    <th class="align-middle">View Exp</th>
+                                                    <th class="align-middle">Mail</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody id="dtTableBodyx"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalScrollableTitle">Educational Information</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h1 class="card-title">SSC INFO</h1>
+                                                        <br />
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">School Name</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="text" id="sn">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">Result</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="text" id="sr">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">Passing Date</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="date" id="sd">
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                        <h1 class="card-title">HSC/Diploma INFO</h1>
+                                                        <br />
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">College Name</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="text" id="hn">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">Result</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="text" id="hr">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">Passing Date</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="date" id="hd">
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                        <h1 class="card-title">Bachelor Degree INFO</h1>
+                                                        <br />
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">University Name</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="text" id="bn">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">Result</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="text" id="br">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">Passing Date</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="date" id="bd">
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                        <h1 class="card-title">Masters INFO</h1>
+                                                        <br />
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">University Name</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="text" id="mn">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">Result</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="text" id="mr">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">Passing Date</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="date" id="md">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div> <!-- end col -->
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#exampleModalScrollable2">Exprience</button>
+                                        <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle2" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalScrollableTitle2">Scrollable Modal</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div class="table-responsive">
+                                                            @*<table id="dtdata" class="table align-middle table-nowrap mb-0">*@
+                                                            <table id="" class="table table-bordered dt-responsive  nowrap w-100">
+                                                                <thead class="table-light">
+                                                                    <tr>
+                                                                        <th class="align-middle">CompanyName</th>
+                                                                        <th class="align-middle">Designation</th>
+                                                                        <th class="align-middle">Duration</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody id="tblexp"></tbody>
+                                                            </table>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div> <!-- end col -->
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#exampleModalScrollable">BIO</button>
+                                        <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="modal fade" id="exampleModalScrollable3" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle3" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalScrollableTitle2">Scrollable Modal</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        @using (Html.BeginForm("SendMail", "AdminCareer", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                                                        {
+                                                            <form method="post">
+                                                                <div class="mb-3 row">
+                                                                    <label for="example-text-input" class="col-md-2 col-form-label">Mail To</label>
+                                                                    <div class="col-md-4">
+                                                                        <input class="text-center form-control" name="EmailId"  type="text" id="email">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-3 row">
+                                                                    <label for="example-text-input" class="col-md-2 col-form-label">First Name</label>
+                                                                    <div class="col-md-4">
+                                                                        <input class="text-center form-control" name="FName" hidden type="text" id="fname">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-3 row">
+                                                                    <label for="example-text-input" class="col-md-2 col-form-label">Last Name</label>
+                                                                    <div class="col-md-4">
+                                                                        <input class="text-center form-control" name="LName" hidden type="text" id="lname">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="mb-3 row">
+                                                                    <label for="example-text-input" class="col-md-2 col-form-label">Subject</label>
+                                                                    <div class="col-md-4">
+                                                                        <input class="text-center form-control" name="Subject" placeholder="Enter product name" type="text" id="sr">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mb-3 row">
+                                                                    <label for="example-text-input" class="col-md-2 col-form-label">Meeting Date</label>
+                                                                    <div class="col-md-4">
+                                                                        <input class="text-center form-control" name="MeetDate" placeholder="Enter product name" type="date" id="sr">
+                                                                    </div>
+                                                                </div>
+
+                                                                <button class="theme-btn btn-style-three" type="submit" name="submit-form"><span class="txt">Send Mail</span></button>
+
+                                                            </form>
+                                                        }
+                                                        </div>
+                                                </div>
+                                            </div> <!-- end col -->
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#exampleModalScrollable">BIO</button>
+                                        <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- end main content-->
+
+    </div>
+
+
+
+</body>
+<input id="hfEditbtn" value="@ViewBag.Editbtn" style="display:none" />
+<input id="masterId" value="@ViewBag.Id" style="display:none" />
+@section Scripts{
+    <script src="~/assets/libs/jquery/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+    @*<script src="https://code.jquery.com/jquery-3.5.1.js"></script>*@
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+    @*<script src="~/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>*@
+
+
+
+
+<script>
+
+
+        $(document).ready(function ()
+        {
+
+            $.noConflict();
+            ListProduct();
+            $('#dtdata').DataTable();
+            //pdf();
+        });
+
+        function un(o)
+        {
+            return o != null ? o : '';
+        }
+
+        function ListProduct()
+        {
+            var urlpath = '@Url.Action("Show_Job_Application", "AdminCareer")';
+            $.ajax({
+                url: urlpath,
+                dataType: 'json',
+                type: "Get",
+                async: false,
+                beforeSend: function() {
+                },
+                success: function (data) {
+                    //$('#tabH').show();
+                    var result = JSON.parse(data);
+                    var row = "";
+
+                    $('#dtTableBodyx').append("");
+                    for (var i = 0; i < result.length; i++)
+                    {
+
+                        row += '<tr>';
+                        row += '<td><a href="javascript: void(0);" class="text-body fw-bold">' + un(result[i].ApplicantId) + '</a> </td>';
+                        row += '<td><a href="' + un(result[i].Picture) + '" download><img src="' + un(result[i].Picture) + '" style="height:50px;width:50px"  /></a></td>';
+                        row += '<td>' + un(result[i].First) + ' ' + un(result[i].Last) + '</td>';
+                        row += '<td>' + un(result[i].Email) + '</td>';
+                        row += '<td>' + un(result[i].Phone) +'</td>';
+                        row += '<td>' + un(result[i].JobName) +'</td>';
+                        row += '<td>' + un(result[i].AppliedDate) + '</td>';
+                        row += '<td><button type="button" class="btn btn-primary btn-sm  waves-effect waves-ligh" data-bs-toggle="modal" ' + $('#hfEditbtn').val() + ' onclick="editClick(' + result[i].ApplicantId + ')" data-bs-target="#exampleModalScrollable">View</button></td>';
+                        row += '<td><button type="button" class="btn btn-dark btn-sm  waves-effect waves-ligh" data-bs-toggle="modal" ' + $('#hfEditbtn').val() + ' onclick="editClick(' + result[i].ApplicantId + ')" data-bs-target="#exampleModalScrollable2">Exp</button></td>';
+                        row += '<td><button type="button" class="btn btn-success btn-sm  waves-effect waves-ligh" data-bs-toggle="modal" ' + $('#hfEditbtn').val() + ' onclick="editClick(' + result[i].ApplicantId + ')" data-bs-target="#exampleModalScrollable3">Mail</button></td>';
+
+                        row += '</tr>';
+                    }
+                    $('#dtTableBodyx').append(row);
+                },
+
+            });
+    }
+
+
+        function editClick(id)
+        {
+
+            GetData(id);
+        }
+        function GetData(id)
+        {
+            //alert(id);
+            var urlpath = '@Url.Action("Show_ApplicationEntry_Id", "AdminCareer")';
+            $.ajax({
+                url: urlpath,
+                dataType: 'json',
+                data: { id: id },
+                type: "GET",
+                async: false,
+                success: function (data)
+                {
+                    $('#masterId').val(data.ApplicantId);
+                    $('#fname').val(data.First);
+                    $('#lname').val(data.Last);
+
+                    $('#email').val(data.Email);
+                    $('#sn').val(data.SchoolName);
+                    $('#sr').val(data.SSCResult);
+                    var spd = formatDate(new Date(parseInt(data.SSCPassDate.substr(6))));
+                    $('#sd').val(spd);
+
+                    $('#hn').val(data.CollegeName);
+                    $('#hr').val(data.HSCResult);
+                    var hpd = formatDate(new Date(parseInt(data.HSCPassDate.substr(6))));
+                    $('#hd').val(hpd);
+
+                    $('#bn').val(data.UniversityName);
+                    $('#br').val(data.UniversityResult);
+                    var bpd = formatDate(new Date(parseInt(data.UniversityPassDate.substr(6))));
+                    $('#bd').val(bpd);
+
+                    $('#mn').val(data.MUniversityName);
+                    $('#mr').val(data.MastarsResult);
+                    var mpd = formatDate(new Date(parseInt(data.MastarsPassDate.substr(6))));
+                    $('#md').val(mpd);
+
+                    Get_Expricene(id);
+
+
+                },
+                complete: function ()
+                {
+
+                }
+            });
+        }
+    function Get_Expricene(id)
+        {
+            var urlpath = '@Url.Action("Show_ApplicationEntry_Expricen", "AdminCareer")';
+            $.ajax({
+                url: urlpath,
+                dataType: 'json',
+                type: "Get",
+                data: { id: id },
+                async: true,
+                beforeSend: function() {
+                },
+                success: function (data) {
+                    //$('#tabH').show();
+                    var result = JSON.parse(data);
+                    var row = "";
+
+                    //$('#dtimg').html("");
+                    for (var i = 0; i < result.length; i++)
+                    {
+                        row += '<tr>';
+                        row += '<td>' + un(result[i].CompanyName) + '</td>';
+                        row += '<td>' + un(result[i].Designation) + '</td>';
+                        row += '<td>' + un(result[i].Duration) + '</td>';
+                        row += '</tr>';
+
+                    }
+                    $('#tblexp').html(row);
+                },
+
+            });
+    }
+
+    @*function sendmail(id) {
+
+            EmailData(id);
+        }
+
+
+
+        function EmailData(id)
+        {
+            //alert(id);
+            var urlpath = '@Url.Action("GetEmail_Id", "AdminCareer")';
+            $.ajax({
+                url: urlpath,
+                dataType: 'json',
+                data: { id: id },
+                type: "GET",
+                async: false,
+                success: function (data)
+                {
+
+                    $('#masterId').val(data.ApplicantId);
+
+                    $('#email').val(data.Email);
+          $('#fname').val(data.First);
+                    $('#lname').val(data.Last);
+                },
+                complete: function ()
+                {
+
+                }
+            });
+    }*@
+
+
+
+        function formatDate(date) {
+
+            var d = new Date(date),
+                month = '' + (d.getMonth() + 1),
+                day = '' + d.getDate(),
+                year = d.getFullYear();
+
+            if (month.length < 2)
+                month = '0' + month;
+            if (day.length < 2)
+                day = '0' + day;
+
+            return [year, month, day].join('-');
+        }
+
+
+</script>
+}

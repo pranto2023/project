@@ -1,0 +1,152 @@
+﻿
+@{
+    ViewBag.Title = "RequstAdminToAssign";
+    Layout = "~/Views/Shared/_LayoutRegis.cshtml";
+}
+
+<body>
+
+    <div class="account-pages my-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="card overflow-hidden">
+                        <div class="bg-primary bg-soft">
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="text-primary p-4">
+                                        <h5 class="text-primary">Register</h5>
+                                        <p>Get your free Skote account now.</p>
+                                    </div>
+                                </div>
+                                <div class="col-5 align-self-end">
+                                    <img src="~/InnovateITAllContent/0992.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body pt-0">
+                            <div>
+                                <a href="index.html">
+                                    <div class="avatar-md profile-user-wid mb-4">
+                                        <span class="avatar-title rounded-circle bg-light">
+                                            <img src="~/InnovateITAllContent/0992.png" alt="" class="rounded-circle" height="34">
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-2">
+                                <section class="container">
+                                    <div class="row">
+                                        <div class="">
+                                            <div class="card bg- mb-3" style="color:black">
+
+                                                <div class="card-body text-center">
+                                                    <h5 id="clientTOken" class="card-title">Dear @Session["UserName"]</h5>
+                                                    <p style="font-size:2em;color:crimson;">Your authentication has been blocked for temporary basis, please kindly contact with code generator</p>
+                                                    
+                                                    <button type="button" onclick="Openwht()" class="btn btn-warning btn-sm btn-rounded waves-effect waves-light">
+                                                        CONTACT
+                                                    </button>
+
+                                                    @*<a href="/Start/Index" class="btn btn-warning ">Click Here</a>*@
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <div>
+                            @*<p>Do you have an account ? <a href="/UserLogin/SignIn" class="fw-medium text-primary"> SigIn now </a> </p>*@
+                            <p>
+                                ©
+                                <script>document.write(new Date().getFullYear())</script> Code Generator
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="account-pages my-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="card overflow-hidden">
+                        <div class="bg-primary bg-soft">
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="text-primary p-4">
+                                        <h5 class="text-primary">Register</h5>
+                                        <p>Get your free Skote account now.</p>
+                                    </div>
+                                </div>
+                                <div class="col-5 align-self-end">
+                                    <img src="~/assets/images/profile-img.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body pt-0">
+                            <div>
+                                <a href="index.html">
+                                    <div class="avatar-md profile-user-wid mb-4">
+                                        <span class="avatar-title rounded-circle bg-light">
+                                            <img src="~/InnovateITAllContent/InnovateITLOGO/tab-logo-innovate-It.jpeg" alt="" class="rounded-circle" height="34">
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-2">
+                                <section class="container">
+                                    <div class="row">
+                                        <div class="">
+                                            <div class="card bg- mb-3" style="color:black">
+
+                                                <div class="card-body text-center">
+                                                    <h5 id="clientTOken" class="card-title">Dear @Session["UserName"]</h5>
+                                                    <p>Your ID is not <span style="font-weight:bold">validate</span> by Admin. Please ask <b>ADMIN</b> for the <b> APPROVAL</b> your account.</p>
+                                                    <p>Thanks.</p>
+                                                    <p>From CDGEN Developer TEAM</p>
+
+                                                    <button type="button" onchange="logout()" class="btn btn-warning btn-sm btn-rounded waves-effect waves-light">
+                                                        <a href="/UserLogin/SignOut">LogOut</a>
+                                                    </button>-->
+    @*<a href="/Start/Index" class="btn btn-warning ">Click Here</a>*@
+    <!--</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <div>
+                            <p>Do you have an account ? <a href="/UserLogin/SignIn" class="fw-medium text-primary"> SigIn now </a> </p>
+                            <p>
+                                ©
+                                <script>document.write(new Date().getFullYear())</script> Code Generator
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+</body>
+
+    <script>
+        function Openwht() {
+            window.open("https://api.whatsapp.com/send?phone=+8801845779143&text=Need_TO_TALK_ABOUT_PAYMENT_ISSUE?");
+        }
+    </script>
+    

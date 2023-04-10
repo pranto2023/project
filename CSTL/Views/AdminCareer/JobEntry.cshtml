@@ -1,0 +1,234 @@
+﻿
+@{
+    ViewBag.Title = "JobEntry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<body data-sidebar="dark">
+
+
+    <div id="layout-wrapper">
+        <div class="">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h4 class="mb-sm-0 font-size-18">Job Entry</h4>
+
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+
+                                        <li class="breadcrumb-item active">Job Entry</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Entry Date: <span id="datex"></span></h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input class="text-center form-control" placeholder="Enter job name" type="text" id="allname">
+                                        </div>
+                                        <div class="col-md-6">
+                                           <select class="text-center form-select" id="comsel">
+                                                @*<option>Select</option>
+                                                    <option>Large select</option>
+                                                    <option>Small select</option>*@
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3 row">
+                                        <label for="example-text-input" class="col-md-2 col-form-label">Job Name</label>
+                                        <div class="col-md-10">
+                                            <input class="text-center form-control" placeholder="Enter job name" type="text" id="allname">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-text-input" class="col-md-2 col-form-label">Short Details</label>
+                                        <div class="col-md-10">
+                                            <textarea class="text-center form-control" type="text" value="Artisanal kale"
+                                                      id="shortdtl">
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-text-input" class="col-md-2 col-form-label">Full Details</label>
+                                        <div class="col-md-10">
+                                            <textarea class="text-center form-control" type="text" value="Artisanal kale"
+                                                      id="fulldtl">
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-search-input" class="col-md-2 col-form-label">Hot Job</label>
+                                        <div class="col-md-10">
+                                            <div class="form-check form-switch form-switch-md mb-3" dir="ltr">
+                                                <input class="form-check-input" type="checkbox" id="customSwitch1">
+                                                <label class="form-check-label" for="SwitchCheckSizemd">Yes!</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<div class="mb-3 row">
+                                        <label class="col-md-2 col-form-label">Select Featured Image</label>
+                                        <div class="col-md-10">
+                                            <div class="input-group">
+                                                <input type="file" class="form-control" id="fileup">
+                                                <span id="v-fileup" class="invalid-tooltip fade hide" data-delay="2000"></span>
+                                                <input type="hidden" id="featimagelink" />-->
+                                    @*<label class="input-group-text" for="inputGroupFile02">Upload</label>*@
+                                    @*<span id="v-featimagelink" class="invalid-tooltip fade hide" data-delay="2000"></span>*@
+                                    <!--</div>
+                                        </div>
+                                    </div>-->
+
+                                    <div class="mb-3 row">
+                                        <label class="col-md-2 col-form-label">Select Job Catagory</label>
+                                        <div class="col-md-10">
+                                            <select class="text-center form-select" id="comsel">
+                                                @*<option>Select</option>
+                                                    <option>Large select</option>
+                                                    <option>Small select</option>*@
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="example-date-input" class="col-md-2 col-form-label">Applied Last Date</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control text-center" type="date" value="2022-01-01"
+                                                   id="pubdate">
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <div class="btn-group btn-group-example mb-3" role="group">
+                                            <button type="button" class="btn btn-outline-danger w-md">Cancel</button>
+                                            <button type="button" class="btn btn-outline-success w-md" onclick="Save()">Save</button>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div>
+                    <!-- end row -->
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+@section Scripts{
+
+    <script src="~/assets/libs/jquery/jquery.min.js"></script>
+    <input id="hfEditbtn" value="@ViewBag.Editbtn" style="display:none" />
+    <input id="masterId" value="@ViewBag.Id" style="display:none" />
+    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+    <script>
+
+        nx = new Date();
+        yx = nx.getFullYear();
+        mx = nx.getMonth() + 1;
+        dx = nx.getDate();
+        document.getElementById("datex").innerHTML = mx + "/" + dx + "/" + yx;
+        CKEDITOR.replace('shortdtl');
+        CKEDITOR.replace('fulldtl');
+
+        $(document).ready(function () {
+            ProductCatagory(0);
+        });
+
+        function IsActiveChangex() {
+            var isActive = $('#customSwitch1').is(':checked');
+            $('#pacinTxt').text("");
+            if (isActive) {
+                $('#pacinTxt').text("Complete");
+            } else {
+                $('#pacinTxt').text("Working");
+            }
+        }
+        function ProductCatagory(id) {
+            var urlpath = '@Url.Action("Show_Catagory", "AdminCareer")';
+            CATAGORY(urlpath, $('#comsel'), 'JobCatId', 'JobCatName', id);
+            //$('#roleSelect').select2();
+        }
+        function CATAGORY(urlpath, setControlId, bindId, bindName, setId) {
+
+            $.ajax({
+                url: urlpath,
+                dataType: 'json',
+                type: "GET", contentType: "application/json; charset=utf-8",
+                async: true,
+                success: function (result) {
+                    console.log(result);
+                    // debugger;
+                    result = JSON.parse(result);
+                    //result = result.d;
+                    setControlId.empty();
+                    setControlId.append($("<option class='text-center'>--- Select ---</option>").val(0));
+                    for (var i = 0; i < result.length; i++) {
+                        setControlId.append($("<option class='text-center'></option>").val(result[i][bindId]).html(result[i][bindName]));
+                    }
+                },
+                complete: function () {
+                    setControlId.val(setId);
+                }
+            });
+        }
+
+
+
+        function Save()
+        {
+            var jsonData = {};
+            var shortdtl = CKEDITOR.instances.shortdtl.getData();
+            var fulldtl = CKEDITOR.instances.fulldtl.getData();
+            jsonData["JobName"] = $('#allname').val();
+            //jsonData["JobFeaturedImage"] = $('#featimagelink').val();
+            jsonData["JobShortDescription"] = shortdtl;
+            jsonData["JobFullDescription"] = fulldtl;
+            jsonData["JobApplyLastDate"] = $('#pubdate').val();
+            jsonData["HotJob"] = $('#customSwitch1').is(':checked');
+
+            var urlpath = '@Url.Action("Save_Admin_PCatagory", "AdminCareer")';
+
+            $.ajax({
+
+                data: jsonData,
+                url: urlpath,
+                type: "POST",
+                beforeSend: function ()
+                {
+                    /*SingleImage();*/
+                },
+                success: function ()
+                {
+                    location.href =  '@Url.Action("JobEntry", "AdminCareer")';
+                },
+            });
+        }
+
+
+
+
+
+    </script>
+}

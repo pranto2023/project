@@ -1,0 +1,203 @@
+﻿
+@{
+    ViewBag.Title = "ApplyWith";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+
+<head>
+
+    
+    <link href="~/assets/jobcss/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="body loader-loading">
+
+    <section>
+        <div class="entity-banner-300" data-inview-showup="showup-translate-up">
+            <img src="~/Pictures/4.jpeg" alt="" data-cover-image="true">
+            <div class="theme-back"></div>
+            <div class="container col-12 pos-front pos-relative content-section">
+                <div class="flex cols-md rows-md">
+                    <div class="col-12 md-col-5 my-auto">
+                        <div class="item item-hover-shadow p-4 block-link-generic text-left">
+                            <h1 class="banner-title text-theme text-theme res-text-xl mt-2" id="allname"></h1>
+                            <p class="banner-subtitle res-text-sm pb-lg-3" id="sd"></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="content-section">
+        <div class="container">
+            <div class="section-head text-center container-md">
+                <p class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Job Description</p>
+            </div>           
+            <div class="md-text-left my-auto col">
+                <p class="text-center" id="fd"></p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="content-section" data-inview-showup="showup-translate-up">
+        <div class="container">
+            <div class="flex cols-xl rows-lg">
+
+                <div class="my-auto text-left md-col-6">
+                    <h3 class="text-left text-upper">Apply with your CV</h3>
+                    
+                </div>
+                <div class="md-col-6">
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <p class="form-label" style="font-size:1.5em">Drop your CV Here</p>
+                            <input type="file" class="form-control" id="fileup" placeholder="insert image" required>
+                            <input type="hidden" id="featimagelink" />
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary " type="button" onclick="Save()">Submit form</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section" data-inview-showup="showup-translate-up">
+        <div class="container">
+            <div class="flex cols-xl rows-lg">
+                <div class="md-col-6"><img class="image" src="~/Pictures/job1.jpeg" alt=""></div>
+                <div class="my-auto text-center md-text-left md-col-6">
+                    <h3 class="text-upper text-right">Don't have you CV ready yet!'</h3>
+                    <p class="text-right" style="font-size:1em">
+                        Click here buy fill the application form.
+                        <button class="btns-bordered btn text-right" type="button" onclick="Go_For_Application()">Apply</button>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/assets/js/pages/form-validation.init.js"></script>
+</body>
+
+<input id="hfEditbtn" value="@ViewBag.Editbtn" style="display:none" />
+<input id="masterId" value="@ViewBag.Id" style="display:none" />
+@section Scripts{
+
+
+    <script src="~/assets/libs/jquery/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var id = $('#masterId').val();
+            Cercular(id);
+        });
+
+        function Cercular(id)
+        {
+            //alert(id);
+            var urlpath = '@Url.Action("Show_Job_By_Id", "Career")';
+            $.ajax({
+                url: urlpath,
+                dataType: 'json',
+                data: { id: id },
+                type: "GET",
+                async: false,
+                success: function (data)
+                {
+                    //debugger;
+                    $('#masterId').val(data.JobId);
+                    $('#allname').html(data.JobName);
+                    $('#sd').html(data.JobShortDescription);
+                    $('#fd').html(data.JobFullDescription);
+                    var entrydate = formatDate(new Date(parseInt(data.JobApplyLastDate.substr(6))));
+                    $('#entrdate').html(entrydate);
+
+                },
+                complete: function ()
+                {
+
+                }
+            });
+        }
+        function Go_For_Application() {
+            var id = $('#masterId').val();
+            location.href = '@Url.Action("ApplyJob", "Career")?id=' + id + '';
+        }
+        function UploadCV() {
+            debugger;
+            var file = document.getElementById("fileup").files[0];
+
+            if (file.size > 3097152) {
+                alert('File size must be smaller than 3mb');
+            }
+            else {
+                var formData = new FormData();
+                formData.append('file', file);
+                var urlpath = '@Url.Action("UploadFiles", "Career")';
+                $.ajax({
+                    processData: false,
+                    contentType: false,
+                    async: false,
+                    data: formData,
+                    url: urlpath,
+                    type: "POST",
+                    success: function (data)
+                    {
+                        $('#featimagelink').val(data.link);
+                        //AddU2(data.link,data.name);
+                    },
+                    error: function ()
+                    {
+                        alert("Error occured!!");
+                    }
+                });
+            }
+        }
+        function Save() {
+            UploadCV();
+            var jsonData = {};
+            jsonData["JobId"] = $('#masterId').val();
+            jsonData["Resume"] = $('#featimagelink').val();
+
+            var urlpath = '@Url.Action("Save_Job_CV", "Career")';
+    $.ajax({
+        data: jsonData,
+        url: urlpath,
+        type: "POST",
+        beforeSend: function () {
+
+        },
+        success: function (result) {
+            location.href =  '@Url.Action("ApplyJobConfirm", "Career")';
+        },
+    });
+}
+        function formatDate(date) {
+
+            var d = new Date(date),
+                month = '' + (d.getMonth() + 1),
+                day = '' + d.getDate(),
+                year = d.getFullYear();
+
+            if (month.length < 2)
+                month = '0' + month;
+            if (day.length < 2)
+                day = '0' + day;
+
+            return [year, month, day].join('-');
+        }
+
+    </script>
+
+
+}

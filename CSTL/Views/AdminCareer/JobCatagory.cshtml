@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "JobCatagory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<body data-sidebar="dark">
+
+    <div id="layout-wrapper">
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title text-center">Job Catagory Entry</h4>
+                                    <br />
+                                    <br />
+                                    <div class="mb-3 row">
+                                        <label for="example-text-input" class="col-md-2 col-form-label">Job Catagory</label>
+                                        <div class="col-md-6">
+                                            <input class="text-center form-control" placeholder="Enter catagory name" type="text" id="catname">
+
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button type="button" onclick="SaveCatagory()" class="btn btn-success waves-effect btn-label waves-light">
+                                                <i class="bx bx-smile label-icon"></i> Save Catagory
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+@section Scripts{
+
+    <script src="~/assets/libs/jquery/jquery.min.js"></script>
+    <input id="hfEditbtn" value="@ViewBag.Editbtn" style="display:none" />
+    <input id="masterId" value="@ViewBag.Id" style="display:none" />
+    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            
+        });
+        
+
+
+        function SaveCatagory()
+        {
+            var jsonData = {};
+
+            jsonData["JobCatName"] = $('#catname').val();
+
+                var urlpath = '@Url.Action("Save_Admin_JobCat", "AdminCareer")';
+
+                $.ajax({
+
+                    data: jsonData,
+                    url: urlpath,
+                    type: "POST",
+                    beforeSend: function () {
+                        //SingleImage();
+                    },
+                    success: function () {
+                        location.href =  '@Url.Action("JobCatagory", "AdminCareer")';
+                    },
+                });
+        }
+    </script>
+}
+

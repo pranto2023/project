@@ -1,0 +1,613 @@
+﻿
+@{
+    ViewBag.Title = "ApplyJob";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<head>
+
+
+    <link href="~/assets/jobcss/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body class="body loader-loading">
+
+    <section>
+        <div class="entity-banner-300" data-inview-showup="showup-translate-up">
+            <img src="~/Pictures/4.jpeg" alt="" data-cover-image="true">
+            <img src="~/Pictures/4.jpeg" alt="" data-cover-image="true">
+            <div class="theme-back"></div>
+            <div class="container col-12 pos-front pos-relative content-section">
+                <div class="flex cols-md rows-md">
+                    <div class="col-12 md-col-5 my-auto">
+                        <div class="item item-hover-shadow p-4 block-link-generic text-left">
+                            <h1 class="banner-title text-theme text-theme res-text-xl mt-2" id="allname"></h1>
+                            <p class="banner-subtitle res-text-sm pb-lg-3" id="sd"></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-content">
+
+        <div class="page-content">
+            <div class="container-fluid">
+                <br />
+                <br />
+                <br />
+                <br />
+                <div class="container">
+                    <div class="">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title"></h4>
+                                <p class="card-title-desc">
+
+                                </p>
+                                <form class="needs-validation" novalidate>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="validationCustom01" class="form-label">Applicant Image</label>
+                                                <input type="file" class="form-control" id="fileup" placeholder="insert image" required>
+                                                <input type="hidden" id="featimagelink" />
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="validationCustom01" class="form-label">First name</label>
+                                                <input type="text" class="form-control" id="fn" maxlength="15"
+                                                       placeholder="First name" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="validationCustom02" class="form-label">Last name</label>
+                                                <input type="text" class="form-control" id="ln" maxlength="15"
+                                                       placeholder="Last name" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="validationCustom01" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="em" maxlength="30"
+                                                       placeholder="example@prantoitbd.com" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="validationCustom02" class="form-label">Phone</label>
+                                                <input type="text" class="form-control"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="pn" maxlength="11"
+                                                       placeholder="+8801XXXXXXXXX" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="validationCustom02" class="form-label">National Identity Card</label>
+                                                <input type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" id="nid" maxlength="15"
+                                                       placeholder="NID" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="validationCustom01" class="form-label">Address</label>
+                                                <textarea type="text" class="form-control" id="ad" maxlength="200" rows="4"
+                                                          placeholder="max length 150" required></textarea>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3>Secondary School Certificate</h3>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="validationCustom01" class="form-label">School Name</label>
+                                                <input type="text" class="form-control" id="sn" maxlength="50"
+                                                       placeholder="Enter school name" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @*<div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="validationCustom02" class="form-label">SSC Board</label>
+                                                    <input type="text" class="form-control" id="validationCustom02"
+                                                           placeholder="enter board" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                </div>
+                                            </div>*@
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="validationCustom01" class="form-label">Result</label>
+                                                <input type="text" class="form-control" id="sr" maxlength="4"
+                                                       placeholder="GPA: 5.00" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="validationCustom02" class="form-label">Passing Year</label>
+                                                <input type="year" class="form-control" id="sp"
+                                                       required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <h3>Higher Secondary Certificate / Diploma</h3>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="validationCustom01" class="form-label">College Name</label>
+                                                <input type="text" class="form-control" id="cn" maxlength="50"
+                                                       placeholder="Enter school name" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @*<div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="validationCustom02" class="form-label">HSC Board</label>
+                                                    <input type="text" class="form-control" id="validationCustom02"
+                                                           placeholder="enter board" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                </div>
+                                            </div>*@
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="validationCustom01" class="form-label">Result</label>
+                                                <input type="text" class="form-control" id="hr" maxlength="4"
+                                                       placeholder="GPA: 5.00" required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="validationCustom02" class="form-label">Passing Year</label>
+                                                <input type="date" class="form-control" id="hp"
+                                                       required>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3>Bachelor Degree </h3>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="" class="form-label">University Name</label>
+                                                <input type="text" class="form-control" id="un" maxlength="50"
+                                                       placeholder="Enter university name" required>
+                                               
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="" class="form-label">Bachelor Degree on</label>
+                                                <select class="text-center form-select" id="comsel" ></select>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="" class="form-label">Result</label>
+                                                <input type="text" class="form-control" id="ur" maxlength="4"
+                                                       placeholder="GPA: 5.00" >
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="" class="form-label">Passing Year</label>
+                                                <input type="date" class="form-control" id="up"
+                                                       >
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3>Mastars Degree </h3>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="" class="form-label">University Name</label>
+                                                <input type="text" class="form-control" id="mn" maxlength="50"
+                                                       placeholder="Enter university name" required>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="validationCustom02" class="form-label">Mastars Degree on</label>
+                                                <select class="text-center form-select" id="modsel" ></select>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="" class="form-label">Result</label>
+                                                <input type="text" class="form-control" id="mr" maxlength="4"
+                                                       placeholder="GPA: 5.00" required>
+                                               
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="" class="form-label">Passing Year</label>
+                                                <input type="date" class="form-control" id="mp" >
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <h3>Job Exprience</h3>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="" class="form-label">Company Name</label>
+                                                <input type="text" class="form-control" id="comname" maxlength="50"
+                                                       placeholder="Enter company name" >
+                                               
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="" class="form-label">Designation</label>
+                                                <input type="text" class="form-control" id="desg"
+                                                       placeholder="" >
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="" class="form-label">How long you have worked there?</label>
+                                                <input type="text" class="form-control" id="dur" maxlength="1"
+                                                       placeholder="" >
+                                               
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <h3>Add Job</h3>
+                                                <button class="btn btn-primary" type="button" onclick="AddU2()">Add</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    @*<h4 class="card-title">List of entry</h4>*@
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered border-dark mb-0" id="tblfile">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="text-center col-md-1">Exprience No</th>
+                                                                    <th class="text-center col-md-3">Company NAme</th>
+                                                                    <th class="text-center col-md-2">Designation</th>
+                                                                    <th class="text-center col-md-1">Duration</th>
+                                                                    <th class="text-center col-md-1">Remove</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody id="updata">
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div>
+                                        <button class="btn btn-primary" type="submit" onclick="Save()">Submit form</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- end card -->
+                    </div> <!-- end col -->
+                </div>
+            </div> <!-- container-fluid -->
+        </div>
+
+    </div>
+    <script src="~/assets/js/pages/form-validation.init.js"></script>
+</body>
+
+<input id="hfEditbtn" value="@ViewBag.Editbtn" style="display:none" />
+<input id="masterId" value="@ViewBag.Id" style="display:none" />
+@section Scripts{
+
+
+    <script src="~/assets/libs/jquery/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //var id = getUrlVars()["id"];
+            var id = $('#masterId').val();
+            Cercular(id);
+            BscDegree(0);
+            MscDegree(0);
+        });
+       
+
+        function Cercular(id)
+        {
+            //alert(id);
+            var urlpath = '@Url.Action("Show_Job_By_Id", "Career")';
+            $.ajax({
+                url: urlpath,
+                dataType: 'json',
+                data: { id: id },
+                type: "GET",
+                async: false,
+                success: function (data)
+                {
+                    //debugger;
+                    $('#masterId').val(data.JobId);
+                    $('#allname').html(data.JobName);
+                    $('#sd').html(data.JobShortDescription);
+                    $('#fd').html(data.JobFullDescription);
+                    var entrydate = formatDate(new Date(parseInt(data.JobApplyLastDate.substr(6))));
+                    $('#entrdate').html(entrydate);
+
+                },
+                complete: function ()
+                {
+
+                }
+            });
+        }
+        function BscDegree(id) {
+            var urlpath = '@Url.Action("Show_Bsc_Degree", "Career")';
+            BDegree(urlpath, $('#comsel'), 'UniversityId', 'DegreeName', id);
+            //$('#roleSelect').select2();
+        }
+        function MscDegree(id) {
+            var urlpath = '@Url.Action("Show_Msc_Degree", "Career")';
+            MDegree(urlpath, $('#modsel'), 'MastarsId', 'MscDegree', id);
+            //$('#roleSelect').select2();
+        }
+
+        function BDegree(urlpath, setControlId, bindId, bindName, setId) {
+
+        $.ajax({
+            url: urlpath,
+            dataType: 'json',
+            type: "GET", contentType: "application/json; charset=utf-8",
+            async: true,
+            success: function (result) {
+                console.log(result);
+                // debugger;
+                result = JSON.parse(result);
+                //result = result.d;
+                setControlId.empty();
+                setControlId.append($("<option class='text-center'>--- Select ---</option>").val(0));
+                for (var i = 0; i < result.length; i++) {
+                    setControlId.append($("<option class='text-center'></option>").val(result[i][bindId]).html(result[i][bindName]));
+                }
+            },
+            complete: function () {
+                setControlId.val(setId);
+            }
+        });
+        }
+        function MDegree(urlpath, setControlId, bindId, bindName, setId) {
+
+            $.ajax({
+                url: urlpath,
+                dataType: 'json',
+                type: "GET", contentType: "application/json; charset=utf-8",
+                async: true,
+                success: function (result) {
+                    console.log(result);
+                    // debugger;
+                    result = JSON.parse(result);
+                    //result = result.d;
+                    setControlId.empty();
+                    setControlId.append($("<option class='text-center'>--- Select ---</option>").val(0));
+                    for (var i = 0; i < result.length; i++) {
+                        setControlId.append($("<option class='text-center'></option>").val(result[i][bindId]).html(result[i][bindName]));
+                    }
+                },
+                complete: function () {
+                    setControlId.val(setId);
+                }
+            });
+        }
+
+
+        function DelU(id) {
+            debugger;
+            var link = $("#fileup" + id).attr('href');
+            $('#addru' + id).remove();
+            //DeleteFile(link);
+        }
+        function UploadFile() {
+            debugger;
+            var file = document.getElementById("fileup").files[0];
+
+            if (file.size > 2097152) {
+                alert('File size must be smaller than 2mb');
+            }
+            else {
+                var formData = new FormData();
+                formData.append('file', file);
+                var urlpath = '@Url.Action("UploadFilesx", "Career")';
+                $.ajax({
+                    processData: false,
+                    contentType: false,
+                    async: false,
+                    data: formData,
+                    url: urlpath,
+                    type: "POST",
+                    success: function (data)
+                    {
+                        $('#featimagelink').val(data.link);
+                        //AddU2(data.link,data.name);
+                    },
+                    error: function ()
+                    {
+                        alert("Error occured!!");
+                    }
+                });
+            }
+        }
+        function Save() {
+            UploadFile();
+            var jsonData = {};
+
+            jsonData["JobId"] = $('#masterId').val();
+            jsonData["First"] = $('#fn').val();
+            
+            jsonData["Last"] = $('#ln').val();
+            jsonData["Email"] = $('#em').val();
+            jsonData["Picture"] = $('#featimagelink').val();
+    jsonData["Address"] = $('#ad').val();
+    jsonData["Phone"] = $('#pn').val();
+    jsonData["SSCResult"] = $('#sr').val();
+    jsonData["HSCResult"] = $('#hr').val();
+    jsonData["UniversityResult"] = $('#ur').val();
+    jsonData["MastarsResult"] = $('#mr').val();
+    jsonData["UniversityId"] = $('#comsel').val();
+    jsonData["MastarsId"] = $('#modsel').val();
+    jsonData["SchoolName"] = $('#sn').val();
+    jsonData["CollegeName"] = $('#cn').val();
+    jsonData["UniversityName"] = $('#un').val();
+    jsonData["MUniversityName"] = $('#mn').val();
+    jsonData["SSCPassDate"] = $('#sp').val();
+    jsonData["HSCPassDate"] = $('#hp').val();
+    jsonData["UniversityPassDate"] = $('#up').val();
+    jsonData["MastarsPassDate"] = $('#mp').val();
+    jsonData["NID"] = $('#nid').val();
+
+    var urlpath = '@Url.Action("Save_Job_Application", "Career")';
+    $.ajax({
+        data: jsonData,
+        url: urlpath,
+        type: "POST",
+        beforeSend: function () {
+
+        },
+        success: function (result) {
+            debugger;
+            Exprience(result.ApplicantId);
+            location.href =  '@Url.Action("ApplyJobConfirm", "Career")';
+        },
+    });
+}
+        function AddU2() {
+            var company = $('#comname').val();
+            var designation = $('#desg').val();
+            var duration = $('#dur').val();
+            var i = $('#tblfile > tbody > tr:last').index();
+            var html = '<tr class="text-center" id="addru' + (i + 1) + '">' +
+                '<td ' + (i + 1) + '">' + (i + 2) + '</td>' +
+                '<td id="comname' + (i + 1) + '">' + company + '</td>' +
+                '<td id="desg' + (i + 1) + '">' + designation + '</td>' +
+                '<td id="dur' + (i + 1) + '" class="text-center">' + duration + '</td>' +
+                '<td><button type="button" class="btn btn-danger" onclick="DelU(' + (i + 1) + ')"><i class="fas fa-trash-alt"></i></button></td>' +
+                '</tr>';
+            $('#updata').append(html);
+        }
+
+        function Exprience(ApplicantId) {
+            debugger;
+            $('#tblfile > tbody > tr').each(function(index) {
+                var theObj3 = {};
+                theObj3["ApplicantId"] = ApplicantId;
+                theObj3["CompanyName"] = $('#comname' + index).html();
+                theObj3["Designation"] = $('#desg' + index).html();
+                theObj3["Duration"] = $('#dur' + index).html();
+
+                var urlpath = '@Url.Action("Save_Job_Exp", "Career")';
+                $.ajax({
+                    data: theObj3,
+                    url: urlpath,
+                    type: "POST",
+                    async: false,
+                    beforeSend: function () {
+                    },
+                    success: function (result) {
+                    },
+                    complete: function () {
+                    },
+                });
+            });
+        }
+    </script>
+
+
+}

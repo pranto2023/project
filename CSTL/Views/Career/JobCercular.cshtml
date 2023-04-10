@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewBag.Title = "JobCercular";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+
+<body class="body loader-loading">
+
+    <section>
+        <div class="flexslider screen-height">
+            <div class="slides">
+                <div class="slide">
+                    <img src="~/Pictures/1.png" alt="" data-cover-image="true">
+                    <div class="theme-back"></div>
+                    <div class="pos-center col-12 container">
+                        <div class="banner-title res-text-xl" style="color:black">
+                            Software Careers
+                        </div>
+                        <div class="banner-subtitle res-text-md">We are looking for powerful software engineer for our future leaders.
+                        <br />At <span style="font-family:Impact;color:black">Amazopify Ltd</span> you will be a part of our
+                        company that puts its own people <br />first, celebrates uniqueness and welcomes talent with open arms.</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="~/Pictures/2.png" alt="" data-cover-image="true">
+                    <div class="theme-back"></div>
+                    <div class="pos-center col-12 container">
+                        <div class="banner-title res-text-xl" style="color:black">
+                            Human Resources & <br />
+                            ​​​​​​​Communications Careers
+                        </div>
+                        <div class="banner-subtitle res-text-md">
+                            Partner with employees and leaders on
+                            projects ​​​​​​​critical to our <br /> key business objectives.
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="~/Pictures/4.jpeg"  alt="" data-cover-image="true">
+                    <div class="theme-back"></div>
+                    <div class="pos-center col-12 container">
+                        <div class="banner-title res-text-xxl" style="color:black">We Design SaaS Product</div>
+                        <div class="banner-subtitle res-text-md">
+                            Creating user-centred interfaces and design systems that combine aesthetic <br /> with good user experience
+                        </div>
+
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="~/Pictures/4.jpeg" alt="" data-cover-image="true">
+                    <div class="theme-back"></div>
+                    <div class="pos-center col-12 container">
+                        <div class="banner-title res-text-xxl"style="color:black">We Design SaaS Product</div>
+                        <div class="banner-subtitle res-text-md">
+                            Creating user-centred interfaces and design systems that combine aesthetic <br /> with good user experience
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </section>
+
+
+    <div class="section-head text-center container-md">
+        <h1 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">RECOMMENDED JOBS BASED ON YOUR PROFILE</h1>
+    </div>
+
+    <section class="container">
+
+        @foreach (var item in ViewBag.careerDAO)
+        {
+            <article class="article" data-inview-showup="showup-translate-up">
+                <h3 class="offs-sm">@item.JobName</h3>
+                <p>
+                    @Html.Raw(item.JobShortDescription)
+                </p>
+                <div class="table">
+                    <div class="col text-right"><a href="/Career/ApplyWith/@item.JobId" class="btn btn-md btns-bordered text-upper">Read More</a></div>
+                </div>
+                <div class="line-sides main-bg out-lg" data-inview-showup="showup-translate-up"></div>
+            </article>
+        }
+
+    </section>
+
+</body>
+
+<input id="hfEditbtn" value="@ViewBag.Editbtn" style="display:none" />
+<input id="hfEditbtnx" value="@ViewBag.Editbutn" style="display:none" />
+<input id="hfEditbtnxp" value="@ViewBag.Editbutn" style="display:none" />
+
+@section Scripts{
+    <script src="~/assets/libs/jquery/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function ()
+        {
+            
+        });
+        var me = getUrlVars()["me"];
+        var name2 = getUrlVars()["name2"];
+
+
+        function getUrlVars() {
+
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+
+    </script>
+}

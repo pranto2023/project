@@ -1,0 +1,263 @@
+﻿
+@{
+    ViewBag.Title = "JobApplicationByCV";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<body data-sidebar="dark">
+
+    <!-- <body data-layout="horizontal" data-topbar="dark"> -->
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        <div class="">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-4">Applicant List</h4>
+                                    <div class="table-responsive">
+                                        @*<table id="dtdata" class="table align-middle table-nowrap mb-0">*@
+                                        <table id="dtdata" class="table table-bordered dt-responsive  nowrap w-100">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    @*<th style="width: 20px;">
+                                                            <div class="form-check font-size-16 align-middle">
+                                                                <input class="form-check-input" type="checkbox" id="transactionCheck01">
+                                                                <label class="form-check-label" for="transactionCheck01"></label>
+                                                            </div>
+                                                        </th>*@
+                                                    <th class="align-middle">SL</th>
+                                                    <th class="align-middle">JobName</th>
+                                                    <th class="align-middle">Applied Date</th>
+                                                    <th class="align-middle">DownloadResume</th>
+                                                    <th class="align-middle">View Resume</th>
+                                                   
+
+                                                </tr>
+                                            </thead>
+                                            <tbody id="dtTableBodyx"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalScrollableTitle">Educational Information</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h1 class="card-title">SSC INFO</h1>
+                                                        <br />
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">School Name</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="text" id="sn">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">Result</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="text" id="sr">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">Passing Date</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="date" id="sd">
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                        <h1 class="card-title">HSC/Diploma INFO</h1>
+                                                        <br />
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">College Name</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="text" id="hn">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">Result</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="text" id="hr">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">Passing Date</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="date" id="hd">
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                        <h1 class="card-title">Bachelor Degree INFO</h1>
+                                                        <br />
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">University Name</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="text" id="bn">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">Result</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="text" id="br">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">Passing Date</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="date" id="bd">
+                                                            </div>
+                                                        </div>
+                                                        <br />
+                                                        <h1 class="card-title">Masters INFO</h1>
+                                                        <br />
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">University Name</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="text" id="mn">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">Result</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="text" id="mr">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="example-text-input" class="col-md-2 col-form-label">Passing Date</label>
+                                                            <div class="col-md-4">
+                                                                <input class="text-center form-control" disabled placeholder="Enter product name" type="date" id="md">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div> <!-- end col -->
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#exampleModalScrollable2">Exprience</button>
+                                        <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>          
+           
+        </div>
+        <!-- end main content-->
+
+    </div>
+
+
+
+</body>
+<input id="hfEditbtn" value="@ViewBag.Editbtn" style="display:none" />
+<input id="masterId" value="@ViewBag.Id" style="display:none" />
+@section Scripts{
+    <script src="~/assets/libs/jquery/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+    @*<script src="https://code.jquery.com/jquery-3.5.1.js"></script>*@
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+    @*<script src="~/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>*@
+
+
+
+
+    <script>
+
+
+        $(document).ready(function ()
+        {
+            $.noConflict();
+            ListProduct();
+            $('#dtdata').DataTable();
+            //pdf();
+        });
+
+        function un(o)
+        {
+            return o != null ? o : '';
+        }
+
+        function ListProduct()
+        {
+            var urlpath = '@Url.Action("Show_Job_Application_CV", "AdminCareer")';
+            $.ajax({
+                url: urlpath,
+                dataType: 'json',
+                type: "Get",
+                async: false,
+                beforeSend: function() {
+                },
+                success: function (data) {
+                    //$('#tabH').show();
+                    var result = JSON.parse(data);
+                    var row = "";
+
+                    $('#dtTableBodyx').append("");
+                    for (var i = 0; i < result.length; i++)
+                    {
+
+                        row += '<tr>';
+                        row += '<td><a href="javascript: void(0);" class="text-body fw-bold">' + un(result[i].CVId) + '</a> </td>';
+                        row += '<td>' + un(result[i].JobName) +'</td>';
+                        row += '<td>' + un(result[i].AppliedDate) + '</td>';
+                        row += '<td><a href="' + un(result[i].Resume) + '" download>' + un(result[i].Resume) +'</a></td>';
+                        //row += '<td><iframe src="' + un(result[i].Resume)+'" height="200" width="300"></iframe></td>';
+                        row += '<td><a href="' + un(result[i].Resume) +'" class="btn btn-primary btn-sm  waves-effect waves-ligh" target="_blank" height="200" width="300">View</a></td>';
+                       
+                        row += '</tr>';
+                    }
+                    $('#dtTableBodyx').append(row);
+                },
+
+            });
+        }
+
+        function formatDate(date) {
+
+            var d = new Date(date),
+                month = '' + (d.getMonth() + 1),
+                day = '' + d.getDate(),
+                year = d.getFullYear();
+
+            if (month.length < 2)
+                month = '0' + month;
+            if (day.length < 2)
+                day = '0' + day;
+
+            return [year, month, day].join('-');
+        }
+
+
+    </script>
+}

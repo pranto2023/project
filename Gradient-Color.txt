@@ -1,0 +1,818 @@
+https://cssgradient.io/
+
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<body class="body loader-loading">
+
+    <section>
+        <div class="flexslider screen-height">
+            <div class="slides">
+                <div class="slide">
+                    <img src="~/assets/images/service/motherboard-1.jpg" alt="" data-cover-image="true">
+                    <div class="theme-back"></div>
+                    <div class="pos-center text-center col-12 text-white">
+                        <div class="banner-title res-text-xxl">Fast & Quick Fix</div>
+                        <div class="banner-subtitle res-text-md">Just send valuable laptop, PC, MAC, Mobile,<br>Gaming Device or Smartphone and we'll take care of it.</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="~/assets/images/service/motherboard-3.jpg" alt="" data-cover-image="true">
+                    <div class="theme-back"></div>
+                    <div class="pos-center text-center col-12 text-white">
+                        <div class="banner-title res-text-xxl">Any Kind of Upgrades</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="~/assets/images/service/data-recovery.jpg" alt="" data-cover-image="true">
+                    <div class="theme-back"></div>
+                    <div class="pos-center text-center col-12 text-white">
+                        <div class="banner-title res-text-xxl">Data Recovery</div>
+                        <div class="banner-subtitle res-text-md">You Lose - We'll Find</div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-custom-navigation"><a href="#" class="flex-prev"><i class="fas fa-angle-left" aria-hidden="true"></i> </a><a href="#" class="flex-next"><i class="fas fa-angle-right" aria-hidden="true"></i></a></div>
+        </div>
+    </section>
+
+    <div class="clearfix muted-bg">
+        <section class="md-stuck-top content-section">
+            <div class="container hyped-block">
+                <div class="row cols-md rows-md">
+                    <div class="md-col-6">
+                        <div class="row cols-md rows-md">
+                            <div class="sm-col-6">
+                                <div class="price-block simple" data-inview-showup="showup-translate-up">
+                                    <div class="price-back"></div>
+                                    <div class="price-image"><img class="image" src="~/assets/images/icons/notebook-dark.png" alt=""></div>
+                                    <div class="price-title">Example</div>
+                                    <div class="price-subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                                    @*<div class="price">$20.00</div>*@
+                                    <a class="btn-md btns-bordered btn text-upper" href="#">read more</a>
+                                </div>
+                            </div>
+                            <div class="sm-col-6">
+                                <div class="price-block simple" data-inview-showup="showup-translate-up">
+                                    <div class="price-back"></div>
+                                    <div class="price-image"><img class="image" src="~/assets/images/icons/computer-dark.png" alt=""></div>
+                                    <div class="price-title">Example</div>
+                                    <div class="price-subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                                    @*<div class="price">$20.00</div>*@
+                                    <a class="btn-md btns-bordered btn text-upper" href="#">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md-col-6">
+                        <div class="row cols-md rows-md">
+                            <div class="sm-col-6">
+                                <div class="price-block simple" data-inview-showup="showup-translate-up">
+                                    <div class="price-back"></div>
+                                    <div class="price-image"><img class="image" src="~/assets/images/icons/printer-dark.png" alt=""></div>
+                                    <div class="price-title">Example</div>
+                                    <div class="price-subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                                    @*<div class="price">$110.00</div>*@
+                                    <a class="btn-md btns-bordered btn text-upper" href="#">read more</a>
+                                </div>
+                            </div>
+                            <div class="sm-col-6">
+                                <div class="price-block simple" data-inview-showup="showup-translate-up">
+                                    <div class="price-back"></div>
+                                    <div class="price-image"><img class="image" src="~/assets/images/icons/mobile-dark.png" alt=""></div>
+                                    <div class="price-title">Example</div>
+                                    <div class="price-subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                                    @*<div class="price">$45.00</div>*@
+                                    <a class="btn-md btns-bordered btn text-upper" href="#">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <article class="article" data-inview-showup="showup-translate-up">
+
+                <h3 class="offs-sm">What is Innovate IT</h3>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="table">
+                    <div class="col text-right"><a href="article.html" class="btn btn-md btns-bordered text-upper">read more</a></div>
+                </div>
+            </article>
+        </section>
+        <section class="solid-section" data-inview-showup="showup-translate-up">
+            <div class="container">
+                <div class="row cols-xl rows-lg">
+                    <div class="md-col-6 md-push-6 text-center md-text-left">
+                        <h2 class="text-upper text-semibold">What we do</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore eu.
+                        </p>
+                        <blockquote class="hard-line-right text-right">
+                            <p>10+ Years Of Working Experience In Quality Repair Services.</p>
+                        </blockquote>
+                        <p>We have a fully trained, experienced service department ready to handle all of your service needs. We have been in the repair and service business since 2006.</p>
+                    </div>
+                    <div class="md-col-6 md-pull-6 md-fix-container"><img class="image" src="~/assets/images/service/serviceman.jpg" alt=""></div>
+                </div>
+                <div>
+                    <div class="row cols-md rows-lg text-center">
+                        <div class="md-col-6">
+                            <div class="row cols-md rows-lg">
+                                <div class="sm-col-6">
+                                    <div class="feature feature-side text-left" data-inview-showup="showup-translate-up">
+                                        <div class="feature-icon"><i class="fas fa-rocket" aria-hidden="true"></i></div>
+                                        <div class="feature-title text-upper">We are fast</div>
+                                        <div class="feature-text">Qualified Workers Lorem Ipsum is simply dummy text of the printing</div>
+                                    </div>
+                                </div>
+                                <div class="sm-col-6">
+                                    <div class="feature feature-side text-left" data-inview-showup="showup-translate-up">
+                                        <div class="feature-icon"><i class="fas fa-dollar-sign" aria-hidden="true"></i></div>
+                                        <div class="feature-title text-upper">No fix, no fee</div>
+                                        <div class="feature-text">Repair on Demand Lorem Ipsum is simply dummy text of the printing</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md-col-6">
+                            <div class="row cols-md rows-lg">
+                                <div class="sm-col-6">
+                                    <div class="feature feature-side text-left" data-inview-showup="showup-translate-up">
+                                        <div class="feature-icon"><i class="far fa-calendar-check" aria-hidden="true"></i></div>
+                                        <div class="feature-title text-upper">30 days warranty</div>
+                                        <div class="feature-text">Guaranteed Service Lorem Ipsum is simply dummy text of the printing</div>
+                                    </div>
+                                </div>
+                                <div class="sm-col-6">
+                                    <div class="feature feature-side text-left" data-inview-showup="showup-translate-up">
+                                        <div class="feature-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
+                                        <div class="feature-title text-upper">Expert staff</div>
+                                        <div class="feature-text">Available Anytime Lorem Ipsum is simply dummy text of the printing</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @*<section class="content-section">
+                <div class="container">
+                    <div class="section-head text-center container-md">
+                        <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Why choose us</h2>
+                        <p data-inview-showup="showup-translate-left">Some Of Our Features</p>
+                    </div>
+                    <div class="row cols-md rows-lg text-center">
+                        <div class="md-col-6">
+                            <div class="row cols-md rows-lg">
+                                <div class="sm-col-6">
+                                    <div class="feature feature-side text-left" data-inview-showup="showup-translate-up">
+                                        <div class="feature-icon"><i class="fas fa-rocket" aria-hidden="true"></i></div>
+                                        <div class="feature-title text-upper">We are fast</div>
+                                        <div class="feature-text">Qualified Workers Lorem Ipsum is simply dummy text of the printing</div>
+                                    </div>
+                                </div>
+                                <div class="sm-col-6">
+                                    <div class="feature feature-side text-left" data-inview-showup="showup-translate-up">
+                                        <div class="feature-icon"><i class="fas fa-dollar-sign" aria-hidden="true"></i></div>
+                                        <div class="feature-title text-upper">No fix, no fee</div>
+                                        <div class="feature-text">Repair on Demand Lorem Ipsum is simply dummy text of the printing</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md-col-6">
+                            <div class="row cols-md rows-lg">
+                                <div class="sm-col-6">
+                                    <div class="feature feature-side text-left" data-inview-showup="showup-translate-up">
+                                        <div class="feature-icon"><i class="far fa-calendar-check" aria-hidden="true"></i></div>
+                                        <div class="feature-title text-upper">30 days warranty</div>
+                                        <div class="feature-text">Guaranteed Service Lorem Ipsum is simply dummy text of the printing</div>
+                                    </div>
+                                </div>
+                                <div class="sm-col-6">
+                                    <div class="feature feature-side text-left" data-inview-showup="showup-translate-up">
+                                        <div class="feature-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
+                                        <div class="feature-title text-upper">Expert staff</div>
+                                        <div class="feature-text">Available Anytime Lorem Ipsum is simply dummy text of the printing</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>*@
+    </div>
+    <section class="alt-bg with-bg solid-section">
+        <div class="container">
+            <div class="section-head text-center container-md">
+                <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Latest Products</h2>
+                <p data-inview-showup="showup-translate-left">We offer a full range of repair services provided by an experienced and specialized team</p>
+            </div>
+            <div class="flex cols-md rows-xl">
+                <div class="md-col-4 sm-col-6">
+                    <div class="item transparent-bg" data-inview-showup="showup-translate-up">
+                        <a href="service.html" class="block-link text-center"><span class="image-wrap"><img class="image" src="~/assets/images/service/item-3.jpg" alt=""></span><span class="hover"><span class="hover-show"><span class="back"></span> <span class="content"><i class="fas fa-search" aria-hidden="true"></i></span></span></span></a>
+                        <div class="item-content px-0 pb-0 pt-4">
+                            <div class="item-title text-upper text-white"><a class="content-link" href="service.html">Repair Smartphone</a></div>
+                            <div class="item-text">We working hard to build a reputation of customer satisfaction through technical excellence and friendly staff</div>
+                            <a href="service.html" class="btn btn-md btns-white-bordered text-upper">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-col-4 sm-col-6">
+                    <div class="item transparent-bg" data-inview-showup="showup-translate-up">
+                        <a href="service.html" class="block-link text-center"><span class="image-wrap"><img class="image" src="~/assets/images/service/item-4.jpg" alt=""></span><span class="hover"><span class="hover-show"><span class="back"></span> <span class="content"><i class="fas fa-search" aria-hidden="true"></i></span></span></span></a>
+                        <div class="item-content px-0 pb-0 pt-4">
+                            <div class="item-title text-upper text-white"><a class="content-link" href="service.html">Tablet Repair</a></div>
+                            <div class="item-text">We working hard to build a reputation of customer satisfaction through technical excellence and friendly staff</div>
+                            <a href="service.html" class="btn btn-md btns-white-bordered text-upper">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-col-4 sm-col-6">
+                    <div class="item transparent-bg" data-inview-showup="showup-translate-up">
+                        <a href="service.html" class="block-link text-center"><span class="image-wrap"><img class="image" src="~/assets/images/service/item-9.jpg" alt=""></span><span class="hover"><span class="hover-show"><span class="back"></span> <span class="content"><i class="fas fa-search" aria-hidden="true"></i></span></span></span></a>
+                        <div class="item-content px-0 pb-0 pt-4">
+                            <div class="item-title text-upper text-white"><a class="content-link" href="service.html">Repair power ic</a></div>
+                            <div class="item-text">We working hard to build a reputation of customer satisfaction through technical excellence and friendly staff</div>
+                            <a href="service.html" class="btn btn-md btns-white-bordered text-upper">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-col-4 sm-col-6">
+                    <div class="item transparent-bg" data-inview-showup="showup-translate-up">
+                        <a href="service.html" class="block-link text-center"><span class="image-wrap"><img class="image" src="~/assets/images/service/item-8.jpg" alt=""></span><span class="hover"><span class="hover-show"><span class="back"></span> <span class="content"><i class="fas fa-search" aria-hidden="true"></i></span></span></span></a>
+                        <div class="item-content px-0 pb-0 pt-4">
+                            <div class="item-title text-upper text-white"><a class="content-link" href="service.html">Screen replacment</a></div>
+                            <div class="item-text">We working hard to build a reputation of customer satisfaction through technical excellence and friendly staff</div>
+                            <a href="service.html" class="btn btn-md btns-white-bordered text-upper">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-col-4 sm-col-6">
+                    <div class="item transparent-bg" data-inview-showup="showup-translate-up">
+                        <a href="service.html" class="block-link text-center"><span class="image-wrap"><img class="image" src="~/assets/images/service/item-10.jpg" alt=""></span><span class="hover"><span class="hover-show"><span class="back"></span> <span class="content"><i class="fas fa-search" aria-hidden="true"></i></span></span></span></a>
+                        <div class="item-content px-0 pb-0 pt-4">
+                            <div class="item-title text-upper text-white"><a class="content-link" href="service.html">Main board repair</a></div>
+                            <div class="item-text">We working hard to build a reputation of customer satisfaction through technical excellence and friendly staff</div>
+                            <a href="service.html" class="btn btn-md btns-white-bordered text-upper">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-col-4 sm-col-6">
+                    <div class="item transparent-bg" data-inview-showup="showup-translate-up">
+                        <a href="service.html" class="block-link text-center"><span class="image-wrap"><img class="image" src="~/assets/images/service/item-7.jpg" alt=""></span><span class="hover"><span class="hover-show"><span class="back"></span> <span class="content"><i class="fas fa-search" aria-hidden="true"></i></span></span></span></a>
+                        <div class="item-content px-0 pb-0 pt-4">
+                            <div class="item-title text-upper text-white"><a class="content-link" href="service.html">Network issue</a></div>
+                            <div class="item-text">We working hard to build a reputation of customer satisfaction through technical excellence and friendly staff</div>
+                            <a href="service.html" class="btn btn-md btns-white-bordered text-upper">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center shift-xl"><a class="btns-bordered-alt btn text-upper" href="services.html" data-inview-showup="showup-translate-up"><i class="fas fa-th-large" aria-hidden="true"></i>&nbsp;&nbsp;view all products</a></div>
+        </div>
+    </section>
+
+    <section class="content-section" data-inview-showup="showup-translate-up">
+        <div class="container">
+            <div class="flex cols-xl rows-lg">
+                <div class="md-col-6"><img class="image" src="~/assets/images/service/board-2079024.jpg" alt=""></div>
+                <div class="my-auto text-center md-text-left md-col-6">
+                    <h2 class="text-upper text-semibold">Your Device In Safe Hands</h2>
+                    <p>Here at Profix we repair hundreds of devices a month, so rest assured you’re in safe hands sending your devices to us for repair.<br>Profix are capable of repairing any electronic device on the market now and those manufactured in the last 10 years. We have all the right tools for the job so we can open up your device, repair it and assemble it all back together.</p>
+                    @*<a class="btns-bordered btn" href="contact-us.html">Contact us</a>*@
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="entity-banner-300" data-inview-showup="showup-translate-up">
+            <img src="~/assets/images/shop/back-image-4.jpg" alt="" data-cover-image="true">
+            <div class="banner-row container">
+                <div class="sm-col-6 md-col-7 m-auto p-4 pt-md-5 banner-preview"><img src="~/assets/images/shop/mobile-phone.png" alt=""></div>
+                <div class="banner-col-textes col-12 sm-col-auto mt-auto p-4 text-center sm-text-right">
+                    <div class="banner-title text-xl text-upper mb-3 text-colorful">iPhone</div>
+                    <div class="banner-main-text text-md mb-4"><span class="item-old-price mr-3 text-muted text-md">$1200</span><span class="item-price text-lg text-white">$930</span></div>
+                    <a class="text-upper px-5 btn" href="#">read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="muted-bg solid-section">
+        <div class="container clearfix">
+            <div class="side-items-head">
+                <h2 class="text-upper main-bg" data-inview-showup="showup-translate-right">Services</h2>
+                <p data-inview-showup="showup-translate-left">We offer a full range of repair<br>services provided by an experienced and specialized team.</p>
+            </div>
+            <div class="side-items">
+                <div class="row cols-tiny rows-tiny">
+                    <div class="md-col-4 sm-col-6">
+                        <div class="item solid" data-inview-showup="showup-translate-up">
+                            <a href="service.html" class="block-link text-center"><span class="image-wrap"><img class="image" src="~/assets/images/service/item-1.jpg" alt=""></span><span class="hover"><span class="hover-show"><span class="back"></span> <span class="content"><i class="fas fa-search" aria-hidden="true"></i></span></span></span></a>
+                            <div class="item-content">
+                                <div class="item-title text-upper"><a href="service.html">Data backup &amp; recovery</a></div>
+                                <div class="item-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+                                </div>
+                                <a href="service.html" class="simple-link text-medium pull-right text-upper btn-md btns-bordered">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md-col-4 sm-col-6">
+                        <div class="item solid" data-inview-showup="showup-translate-up">
+                            <a href="service.html" class="block-link text-center"><span class="image-wrap"><img class="image" src="~/assets/images/service/item-2.jpg" alt=""></span><span class="hover"><span class="hover-show"><span class="back"></span> <span class="content"><i class="fas fa-search" aria-hidden="true"></i></span></span></span></a>
+                            <div class="item-content">
+                                <div class="item-title text-upper"><a href="service.html">Laptop &amp; Mac Upgrade</a></div>
+                                <div class="item-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+                                </div>
+                                <a href="service.html" class="simple-link text-medium pull-right text-upper btn-md btns-bordered">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md-col-4 sm-col-6">
+                        <div class="item solid" data-inview-showup="showup-translate-up">
+                            <a href="service.html" class="block-link text-center"><span class="image-wrap"><img class="image" src="~/assets/images/service/item-3.jpg" alt=""></span><span class="hover"><span class="hover-show"><span class="back"></span> <span class="content"><i class="fas fa-search" aria-hidden="true"></i></span></span></span></a>
+                            <div class="item-content">
+                                <div class="item-title text-upper"><a href="service.html">Repair Smartphone</a></div>
+                                <div class="item-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+                                </div>
+                                <a href="service.html" class="simple-link text-medium pull-right text-upper btn-md btns-bordered">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md-col-4 sm-col-6">
+                        <div class="item solid" data-inview-showup="showup-translate-up">
+                            <a href="service.html" class="block-link text-center"><span class="image-wrap"><img class="image" src="~/assets/images/service/item-4.jpg" alt=""></span><span class="hover"><span class="hover-show"><span class="back"></span> <span class="content"><i class="fas fa-search" aria-hidden="true"></i></span></span></span></a>
+                            <div class="item-content">
+                                <div class="item-title text-upper"><a href="service.html">Tablet Repair</a></div>
+                                <div class="item-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+                                </div>
+                                <a href="service.html" class="simple-link text-medium pull-right text-upper btn-md btns-bordered">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md-col-4 sm-col-6">
+                        <div class="item solid" data-inview-showup="showup-translate-up">
+                            <a href="service.html" class="block-link text-center"><span class="image-wrap"><img class="image" src="~/assets/images/service/item-5.jpg" alt=""></span><span class="hover"><span class="hover-show"><span class="back"></span> <span class="content"><i class="fas fa-search" aria-hidden="true"></i></span></span></span></a>
+                            <div class="item-content">
+                                <div class="item-title text-upper"><a href="service.html">Repair PC &amp; Laptop Hardware</a></div>
+                                <div class="item-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+                                </div>
+                                <a href="service.html" class="simple-link text-medium pull-right text-upper btn-md btns-bordered">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md-col-4 sm-col-6">
+                        <div class="item solid" data-inview-showup="showup-translate-up">
+                            <a href="service.html" class="block-link text-center"><span class="image-wrap"><img class="image" src="~/assets/images/service/item-6.jpg" alt=""></span><span class="hover"><span class="hover-show"><span class="back"></span> <span class="content"><i class="fas fa-search" aria-hidden="true"></i></span></span></span></a>
+                            <div class="item-content">
+                                <div class="item-title text-upper"><a href="service.html">Network Solution</a></div>
+                                <div class="item-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+                                </div>
+                                <a href="service.html" class="simple-link text-medium pull-right text-upper btn-md btns-bordered">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="with-bg solid-section">
+        <div class="fix-image-wrap" data-image-src="../assets/images/service/motherboard-4.jpg" data-parallax="scroll"></div>
+        <div class="theme-back inner-shadow"></div>
+        <div class="container text-center">
+            <div class="section-head text-center container-md">
+                <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Service process</h2>
+                <p data-inview-showup="showup-translate-left">easy and effective way to get your device repaired</p>
+            </div>
+            <div class="service-steps text-upper" data-inview-showup="showup-scale">
+                <div class="step"><span class="step-number">1</span>damage device</div>
+                <div class="step"><span class="step-number">2</span>send it to us</div>
+                <div class="step"><span class="step-number active">3</span>fast fix</div>
+                <div class="step"><span class="step-number">4</span>quick return</div>
+            </div>
+        </div>
+        <div class="text-center shift-xl"><a class="btn text-upper" href="services.html" data-inview-showup="showup-translate-up"><i class="fas fa-th-large" aria-hidden="true"></i>&nbsp;&nbsp;view all services</a></div>
+    </section>
+
+    <section class="content-section" data-inview-showup="showup-translate-up">
+        <div class="container">
+            <div class="flex cols-xl rows-lg">
+                <div class="md-col-6"><img class="image" src="~/assets/images/service/board-2079024.jpg" alt=""></div>
+                <div class="my-auto text-center md-text-left md-col-6">
+                    <h2 class="text-upper text-semibold">Your Device In Safe Hands</h2>
+                    <p>Here at Profix we repair hundreds of devices a month, so rest assured you’re in safe hands sending your devices to us for repair.<br>Profix are capable of repairing any electronic device on the market now and those manufactured in the last 10 years. We have all the right tools for the job so we can open up your device, repair it and assemble it all back together.</p>
+                    <a class="btns-bordered btn" href="contact-us.html">Contact us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="alt-dg with-bg solid-section">
+        <div class="container">
+            <div class="section-head text-center container-md">
+                <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Latest Projects</h2>
+                <p data-inview-showup="showup-translate-left">We offer a full range of repair services provided by an experienced and specialized team</p>
+            </div>
+            <div class="flex cols-md rows-xl">
+                
+                <div class="shuffle-item col-12 md-col-4 sm-col-6" data-groups='["Computer", "Laptop", "Smartphone"]'>
+                    <div class="item muted-bg" data-inview-showup="showup-scale">
+                        <div class="block-link">
+                            <div class="image-wrap"><img class="image" src="~/assets/images/service/item-1.jpg" alt=""></div>
+                            <div class="hover">
+                                <div class="hover-lines">
+                                    <div class="back"></div>
+                                    <div class="line-content">
+                                        <h5 class="text-white">Project title</h5>
+                                        <p>description of project</p>
+                                        <a href="project.html" class="text-upper simple-link line-link text-bold text-sm">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shuffle-item col-12 md-col-4 sm-col-6" data-groups='["Computer", "Laptop", "Smartphone"]'>
+                    <div class="item muted-bg" data-inview-showup="showup-scale">
+                        <div class="block-link">
+                            <div class="image-wrap"><img class="image" src="~/assets/images/service/item-1.jpg" alt=""></div>
+                            <div class="hover">
+                                <div class="hover-lines">
+                                    <div class="back"></div>
+                                    <div class="line-content">
+                                        <h5 class="text-white">Project title</h5>
+                                        <p>description of project</p>
+                                        <a href="project.html" class="text-upper simple-link line-link text-bold text-sm">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shuffle-item col-12 md-col-4 sm-col-6" data-groups='["Computer", "Laptop", "Smartphone"]'>
+                    <div class="item muted-bg" data-inview-showup="showup-scale">
+                        <div class="block-link">
+                            <div class="image-wrap"><img class="image" src="~/assets/images/service/item-1.jpg" alt=""></div>
+                            <div class="hover">
+                                <div class="hover-lines">
+                                    <div class="back"></div>
+                                    <div class="line-content">
+                                        <h5 class="text-white">Project title</h5>
+                                        <p>description of project</p>
+                                        <a href="project.html" class="text-upper simple-link line-link text-bold text-sm">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shuffle-item col-12 md-col-4 sm-col-6" data-groups='["Computer", "Laptop", "Smartphone"]'>
+                    <div class="item muted-bg" data-inview-showup="showup-scale">
+                        <div class="block-link">
+                            <div class="image-wrap"><img class="image" src="~/assets/images/service/item-1.jpg" alt=""></div>
+                            <div class="hover">
+                                <div class="hover-lines">
+                                    <div class="back"></div>
+                                    <div class="line-content">
+                                        <h5 class="text-white">Project title</h5>
+                                        <p>description of project</p>
+                                        <a href="project.html" class="text-upper simple-link line-link text-bold text-sm">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shuffle-item col-12 md-col-4 sm-col-6" data-groups='["Computer", "Laptop", "Smartphone"]'>
+                    <div class="item muted-bg" data-inview-showup="showup-scale">
+                        <div class="block-link">
+                            <div class="image-wrap"><img class="image" src="~/assets/images/service/item-1.jpg" alt=""></div>
+                            <div class="hover">
+                                <div class="hover-lines">
+                                    <div class="back"></div>
+                                    <div class="line-content">
+                                        <h5 class="text-white">Project title</h5>
+                                        <p>description of project</p>
+                                        <a href="project.html" class="text-upper simple-link line-link text-bold text-sm">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shuffle-item col-12 md-col-4 sm-col-6" data-groups='["Computer", "Laptop", "Smartphone"]'>
+                    <div class="item muted-bg" data-inview-showup="showup-scale">
+                        <div class="block-link">
+                            <div class="image-wrap"><img class="image" src="~/assets/images/service/item-1.jpg" alt=""></div>
+                            <div class="hover">
+                                <div class="hover-lines">
+                                    <div class="back"></div>
+                                    <div class="line-content">
+                                        <h5 class="text-white">Project title</h5>
+                                        <p>description of project</p>
+                                        <a href="project.html" class="text-upper simple-link line-link text-bold text-sm">read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center shift-xl"><a class="btns-bordered-alt btn text-upper" href="services.html" data-inview-showup="showup-translate-up"><i class="fas fa-th-large" aria-hidden="true"></i>&nbsp;&nbsp;view all Projects</a></div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="content-section" data-inview-showup="showup-translate-up">
+        <div class="container">
+            <div class="row cols-md rows-xl">
+                <div class="md-col-3 text-center md-text-left">
+                    <h3 class="text-upper text-semibold">News</h3>
+                    <p>Meet with our qualified and expert team. We are specialized in our individual field. We have enough skill and tested. That’s why you’re getting the quality repair services.</p>
+                    <div class="shift-lg"><a class="btn text-upper" href="contact-us.html">View News</a></div>
+                </div>
+                <div class="md-col-3 sm-col-4">
+                    <div class="member sm-fix-container">
+                        <div class="text-center">
+                            <a href="service.html" class="block-link text-center"><span class="image-wrap"><img class="image" src="~/assets/images/service/item-8.jpg" alt=""></span><span class="hover"><span class="hover-show"><span class="back"></span> <span class="content"><i class="fas fa-search" aria-hidden="true"></i></span></span></span></a>
+                        </div>
+                        <div class="member-info muted-bg text-center">
+                            <div class="member-title">Alexander Smith</div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <a href="service.html" style="color:black" class="btn btn-md btns-bordered text-upper">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-col-3 sm-col-4">
+                    <div class="member sm-fix-container">
+                        <div class="text-center">
+                            <a href="service.html" class="block-link text-center"><span class="image-wrap"><img class="image" src="~/assets/images/service/item-8.jpg" alt=""></span><span class="hover"><span class="hover-show"><span class="back"></span> <span class="content"><i class="fas fa-search" aria-hidden="true"></i></span></span></span></a>
+                        </div>
+                        <div class="member-info muted-bg text-center">
+                            <div class="member-title">Bryan Lewis</div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <a href="service.html" style="color:black" class="btn btn-md btns-bordered text-upper">read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-col-3 sm-col-4">
+                    <div class="member sm-fix-container">
+                        <div class="text-center">
+                            <a href="service.html" class="block-link text-center"><span class="image-wrap"><img class="image" src="~/assets/images/service/item-8.jpg" alt=""></span><span class="hover"><span class="hover-show"><span class="back"></span> <span class="content"><i class="fas fa-search" aria-hidden="true"></i></span></span></span></a>
+                        </div>
+                        <div class="member-info muted-bg text-center">
+                            <div class="member-title">David Hanson</div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <a href="service.html" style="color:black" class="btn btn-md btns-bordered text-upper">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="content-section">
+        <div class="container">
+            <div class="section-head text-center container-md">
+                <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Complements from our clients</h2>
+                @*<p data-inview-showup="showup-translate-left">Real customers reviews</p>*@
+            </div>
+            <div class="owl-carousel" data-inview-showup="showup-translate-up" data-owl-dots="true">
+                <div class="item">
+                    <div class="simple-testimonial text-center">
+                        <div class="tt-title">Great customer support</div>
+                        <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                        <div class="tt-content">
+                            <div class="tt-quote">&#8220;</div>
+                            Thanks John, I was really pleased with Profix’s service. Would definitely recommend you and have alredy given out some of your business cards that were left with me. All the best for future succes.
+                        </div>
+                        <div class="tt-icon"><img src="~/assets/images/icons/notebook-sm.png" alt=""></div>
+                        <div class="pexx-tt-user-title">Michale John</div>
+                        <div class="pexx-tt-user-subtitle">Co-Founder, InfoLabs</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="simple-testimonial text-center">
+                        <div class="tt-title">Flexible services</div>
+                        <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                        <div class="tt-content">
+                            <div class="tt-quote">&#8220;</div>
+                            Profix did great job with fixing my laptop for a good price. I recommend any body with laptop problems, they will give you excellent service to all his customers.
+                        </div>
+                        <div class="tt-icon"><img src="~/assets/images/icons/computer-sm.png" alt=""></div>
+                        <div class="pexx-tt-user-title">Merry Smith</div>
+                        <div class="pexx-tt-user-subtitle">CFO, InfoTech</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="simple-testimonial text-center">
+                        <div class="tt-title">Excellent team</div>
+                        <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                        <div class="tt-content">
+                            <div class="tt-quote">&#8220;</div>
+                            Keep up the excellent work. Thank you so much for your help. This is simply unbelievable!
+                        </div>
+                        <div class="tt-icon"><img src="~/assets/images/icons/printer-sm.png" alt=""></div>
+                        <div class="pexx-tt-user-title">Michale John</div>
+                        <div class="pexx-tt-user-subtitle">Co-Founder, InfoLabs</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="simple-testimonial text-center">
+                        <div class="tt-title">Flexible services</div>
+                        <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                        <div class="tt-content">
+                            <div class="tt-quote">&#8220;</div>
+                            Profix did great job with fixing my laptop for a good price. I recommend any body with laptop problems, they will give you excellent service to all his customers.
+                        </div>
+                        <div class="tt-icon"><img src="~/assets/images/icons/mobile-sm.png" alt=""></div>
+                        <div class="pexx-tt-user-title">Merry Smith</div>
+                        <div class="pexx-tt-user-subtitle">CFO, InfoTech</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="simple-testimonial text-center">
+                        <div class="tt-title">Great customer support</div>
+                        <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                        <div class="tt-content">
+                            <div class="tt-quote">&#8220;</div>
+                            Thanks John, I was really pleased with Profix’s service. Would definitely recommend you and have alredy given out some of your business cards that were left with me. All the best for future succes.
+                        </div>
+                        <div class="tt-icon"><img src="~/assets/images/icons/computer-sm.png" alt=""></div>
+                        <div class="pexx-tt-user-title">Michale John</div>
+                        <div class="pexx-tt-user-subtitle">Co-Founder, InfoLabs</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="simple-testimonial text-center">
+                        <div class="tt-title">Excellent team</div>
+                        <div class="tt-rating"><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i><i class="tt-star fa fa-star" aria-hidden="true"></i></div>
+                        <div class="tt-content">
+                            <div class="tt-quote">&#8220;</div>
+                            Keep up the excellent work. Thank you so much for your help. This is simply unbelievable!
+                        </div>
+                        <div class="tt-icon"><img src="~/assets/images/icons/printer-sm.png" alt=""></div>
+                        <div class="pexx-tt-user-title">Michale John</div>
+                        <div class="pexx-tt-user-subtitle">Co-Founder, InfoLabs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-center content-section">
+        <div class="container">
+            <div class="section-head text-center container-md">
+                <h2 class="section-title text-upper text-lg" data-inview-showup="showup-translate-right">Our Clients</h2>
+            </div>
+            <div class="owl-carousel" data-inview-showup="showup-translate-up" data-owl-responsive="2;3;4;5" data-owl-items="5">
+                <div class="item"><a class="grayscale-link" href="#"><img class="image" src="~/assets/images/partners/altworks.png" alt=""></a></div>
+                <div class="item"><a class="grayscale-link" href="#"><img class="image" src="~/assets/images/partners/brothers.png" alt=""></a></div>
+                <div class="item"><a class="grayscale-link" href="#"><img class="image" src="~/assets/images/partners/endless.png" alt=""></a></div>
+                <div class="item"><a class="grayscale-link" href="#"><img class="image" src="~/assets/images/partners/finddata.png" alt=""></a></div>
+                <div class="item"><a class="grayscale-link" href="#"><img class="image" src="~/assets/images/partners/squarepc.png" alt=""></a></div>
+                <div class="item"><a class="grayscale-link" href="#"><img class="image" src="~/assets/images/partners/tranquil.png" alt=""></a></div>
+                <div class="item"><a class="grayscale-link" href="#"><img class="image" src="~/assets/images/partners/uberguard.png" alt=""></a></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-bd" data-inview-showup="showup-translate-up">
+        <div class="container">
+            <div class="contact-table only-xs-text-center">
+                <div class="contact-icon xs-hidden"><i class="fas fa-bicycle" aria-hidden="true"></i></div>
+                <div class="contact-content">
+                    <div class="field-wrap has-icon">
+                        <div class="field-group">
+                            <div class="field-wrap has-icon"><input class="field-control" name="email" type="email" placeholder="Subscription"> <span class="input-group-state"><span class="positioned"><span class="text"><span class="valid-text"><i class="fas fa-check"></i></span> <span class="error-text"><i class="fas fa-times"></i></span> </span></span></span><span class="field-icon"><i class="far fa-envelope"></i></span> <span class="field-back"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-btn"><a href="contact-us.html" class="btn btns-white text-upper">Subscribe</a></div>
+            </div>
+        </div>
+    </section>
+
+    <a href="#" class="scroll-top disabled"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
+    <div class="singlepage-block collapse alt-bg" data-block="search" data-show-block-class="animation-scale-top-right" data-hide-block-class="animation-unscale-top-right">
+        <a href="#" class="close-link" data-close-block><i class="fas fa-times" aria-hidden="true"></i></a>
+        <div class="pos-v-center col-12">
+            <div class="container">
+                <form action="#">
+                    <div class="row cols-md rows-md">
+                        <div class="lg-col-9 md-col-8 sm-col-12">
+                            <div class="field-group">
+                                <div class="field-wrap"><input class="field-control" name="search" placeholder="Search Tags" required="required"> <span class="field-back"></span></div>
+                            </div>
+                        </div>
+                        <div class="lg-col-3 md-col-4 sm-col-6"><button class="btn btns-white-bordered text-upper" type="submit">search</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="block-cart collapse" data-block="cart" data-show-block-class="animation-scale-top-right" data-hide-block-class="animation-unscale-top-right">
+        <div class="cart-inner">
+            <a href="#" class="close-link" data-close-block><i class="fas fa-times" aria-hidden="true"></i></a>
+            <h4 class="text-upper text-center">Your cart</h4>
+            <div class="items">
+                <div class="items collapse" data-block="cart" data-show-block-class="animation-scale-top-right" data-hide-block-class="animation-unscale-top-right">
+                    <div class="shop-side-item cart-item">
+                        <a href="#" class="remove"><i class="fas fa-times"></i></a>
+                        <div class="item-side-image"><a href="shop-item.html" class="item-image responsive-1by1"><img src="~/assets/images/shop/usb-hub.jpg" alt=""></a></div>
+                        <div class="item-side">
+                            <div class="item-title"><a class="item-label-sm item-label-sale item-label" href="#">sale</a> <a href="shop-item.html" class="content-link text-upper">USB 3.0 HUB</a></div>
+                            <div class="item-quantity">Quantity - 1</div>
+                            <div class="item-prices">
+                                <div class="item-price">$67.05</div>
+                                <div class="item-old-price">$102.5</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop-side-item cart-item">
+                        <a href="#" class="remove"><i class="fas fa-times"></i></a>
+                        <div class="item-side-image"><a href="shop-item.html" class="item-image responsive-1by1"><img src="~/assets/images/shop/cable-organizer.jpg" alt=""></a></div>
+                        <div class="item-side">
+                            <div class="item-title"><a class="item-label-sm item-label-new item-label" href="#">new</a> <a href="shop-item.html" class="content-link text-upper">Cable Organizer</a></div>
+                            <div class="item-quantity">Quantity - 1</div>
+                            <div class="item-prices">
+                                <div class="item-price">$15.25</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop-side-item cart-item">
+                        <a href="#" class="remove"><i class="fas fa-times"></i></a>
+                        <div class="item-side-image"><a href="shop-item.html" class="item-image responsive-1by1"><img src="~/assets/images/shop/tablet.jpg" alt=""></a></div>
+                        <div class="item-side">
+                            <div class="item-title"><a href="shop-item.html" class="content-link text-upper">10" Octa Core Tablet</a></div>
+                            <div class="item-quantity">Quantity - 1</div>
+                            <div class="item-prices">
+                                <div class="item-price">$145.99</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line-sides main-bg shift-lg"></div>
+            <div class="row out-md">
+                <div class="col-6 cart-price-title">Subtotal:</div>
+                <div class="col-6 text-right cart-price">$105.20</div>
+            </div>
+            <div class="line-sides main-bg offs-lg"></div>
+            <div class="clearfix"><a href="cart.html" class="btn text-upper btn-md btns-bordered pull-left">view cart</a> <a href="checkout.html" class="btn text-upper btn-md pull-right">checkout</a></div>
+        </div>
+    </div>
+</body>

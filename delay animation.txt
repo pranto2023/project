@@ -1,0 +1,5 @@
+.block-link:hover .hover-lines, .block-link:focus .hover-lines, .block-link:active .hover-lines, .block-link.active .hover-lines
+
+
+
+block-link .hover-lines

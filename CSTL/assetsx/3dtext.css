@@ -1,0 +1,35 @@
+﻿.wrapper {
+    
+    /*This part is important for centering*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.typing-demo {
+    width: 110ch;
+    animation: typing 8s steps(50), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    /*border-right: 3px solid;*/
+    font-family: 'Times New Roman';
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    text-shadow: 16px 22px 11px rgba(168,158,32,0.8);
+
+
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}

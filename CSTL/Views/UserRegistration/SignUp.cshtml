@@ -1,0 +1,337 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_LayoutRegis.cshtml";
+}
+
+
+<body>
+
+    <div class="account-pages my-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="card overflow-hidden">
+                        
+                        <div class="card-body pt-0">
+                           
+                            <div class="p-2">
+                                <form class="needs-validation" novalidate>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="firstname" class="form-label">First Name</label>
+                                                <input type="text" class="form-control" id="firstname" placeholder="Md. Example" required>
+                                                <div class="invalid-feedback">
+                                                    Please Enter Firstname
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="lastname" class="form-label">Last Name</label>
+                                                <input type="text" class="form-control" id="lastname" placeholder="Example" required>
+                                                <div class="invalid-feedback">
+                                                    Please Enter Lastname
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="useremail" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="uxrmailx" placeholder="example@gmail.com" required>
+                                                <div class="invalid-feedback">
+                                                    Please Enter Email
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="username" class="form-label">User name</label>
+                                                <input type="text" class="form-control" id="username" placeholder="example_123" required>
+                                                <div class="invalid-feedback">
+                                                    Please Enter Username
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="userpassword" class="form-label">Password</label>
+                                                <input type="password" class="form-control" id="uxrpassx" placeholder="Enter password" required>
+                                                <div class="invalid-feedback">
+                                                    Please Enter Password
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="designation" class="form-label">Phone Number</label>
+                                                <input type="text" class="form-control"
+                                                       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="11"
+                                                      
+                                                       id="phone" placeholder="01XXXXXXXX" required>
+                                                <div class="invalid-feedback">
+                                                    Please Enter Password
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="designation" class="form-label">Designation</label>
+                                                @*<input type="password" class="form-control" id="designation" placeholder="Enter password" required>*@
+                                                <select class="text-center form-select" id="designationx">
+                                                    @*<option>Select</option>
+                                                        <option>Large select</option>
+                                                        <option>Small select</option>*@
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    Please Enter Password
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="image" class="form-label">Profile Picture</label>
+                                                <input type="file" class="form-control" id="fileup">
+                                                <input type="hidden" id="propic" />
+                                                <span id="v-fileup" class="invalid-tooltip fade hide" data-delay="2000"></span>
+
+                                                <div class="invalid-feedback">
+                                                    Please Enter Password
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 d-grid">
+                                        <button onclick="FinalSave()" class="btn btn-primary waves-effect waves-light" type="button">
+                                            Register
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div>
+                            <p>Do you have an account ? <a href="/UserLogin/SignIn" class="fw-medium text-primary"> SigIn now </a> </p>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+@section Scripts{
+
+
+    <script src="~/assets/libs/jquery/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            Designation(0);
+
+        });
+
+
+
+        function ValidationTooltip(id, message) {
+
+            $(id).empty();
+
+            if ($(id).empty()) {
+                $(id).append(message);
+            }
+            $(id).toast('show');
+            $(id).css("display", "block");
+
+        }
+        function RemoveValidationTooltip(id) {
+            $(id).css("display", "none");
+        }
+        function Validation() {
+
+            $('#fullname').removeClass('is-invalid');
+            $('#comsel').removeClass('is-invalid');
+            $('#password').removeClass('is-invalid');
+            $('#email').removeClass('is-invalid');
+            $('#phone').removeClass('is-invalid');
+            $('#username').removeClass('is-invalid');
+
+            RemoveValidationTooltip("#v-fullname");
+            RemoveValidationTooltip("#v-comsel");
+            RemoveValidationTooltip("#v-password");
+            RemoveValidationTooltip("#v-email");
+            RemoveValidationTooltip("#v-phone");
+            RemoveValidationTooltip("#v-username");
+
+            isValid = true;
+
+            if ($('#fullname').val() == 0) {
+
+                $('#fullname').addClass("is-invalid");
+                ValidationTooltip("#v-fullname", "Please fill out of this field!");
+                isValid = false;
+            }
+
+            if ($('#comsel').val() == 0) {
+
+                $('#comsel').addClass("is-invalid");
+                ValidationTooltip("#v-comsel", "Please fill out of this field!");
+                isValid = false;
+            }
+
+            if ($('#password').val() == 0) {
+
+                $('#password').addClass("is-invalid");
+                ValidationTooltip("#v-password", "Please fill out of this field!");
+                isValid = false;
+            }
+            if ($('#email').val() == 0) {
+
+                $('#email').addClass("is-invalid");
+                ValidationTooltip("#v-ordno", "Please fill out of this field!");
+                isValid = false;
+            }
+            if ($('#username').val() == 0) {
+
+                $('#username').addClass("is-invalid");
+                ValidationTooltip("#v-username", "Please fill out of this field!");
+                isValid = false;
+            }
+            if ($('#phone').val() == 0) {
+
+                $('#phone').addClass("is-invalid");
+                ValidationTooltip("#v-phone", "Please fill out of this field!");
+                isValid = false;
+            }
+            return isValid;
+        }
+
+
+
+
+
+        function Designation(id)
+        {
+            var urlpath = '@Url.Action("Show_Designation", "UserRegistration")';
+            DesignationDrop(urlpath, $('#designationx'), 'DesignationId', 'DesignationName', id);
+            //$('#roleSelect').select2();
+        }
+
+        function DesignationDrop(urlpath, setControlId, bindId, bindName, setId)
+        {
+
+            $.ajax({
+                url: urlpath,
+                dataType: 'json',
+                type: "GET", contentType: "application/json; charset=utf-8",
+                async: true,
+                success: function (result) {
+                    console.log(result);
+                    // debugger;
+                    result = JSON.parse(result);
+                    //result = result.d;
+                    setControlId.empty();
+                    setControlId.append($("<option class='text-center'>--- Select ---</option>").val(0));
+                    for (var i = 0; i < result.length; i++) {
+                        setControlId.append($("<option class='text-center'></option>").val(result[i][bindId]).html(result[i][bindName]));
+                    }
+                },
+                complete: function () {
+                    setControlId.val(setId);
+                }
+            });
+        }
+        function UploadFile() {
+            debugger;
+            var file = document.getElementById("fileup").files[0];
+
+            if (file.size > 2097152) {
+                alert('File size must be smaller than 2mb');
+            }
+            else {
+                var formData = new FormData();
+                formData.append('file', file);
+                var urlpath = '@Url.Action("UploadFiles", "UserRegistration")';
+                $.ajax({
+                    processData: false,
+                    contentType: false,
+                    async: false,
+                    data: formData,
+                    url: urlpath,
+                    type: "POST",
+                    success: function (data)
+                    {
+                        $('#propic').val(data.link);
+                        //AddU2(data.link,data.name);
+                    },
+                    error: function ()
+                    {
+                        alert("Error occured!!");
+                    }
+                });
+            }
+        }
+
+
+        function FinalSave() {
+            if (Validation()) {
+                UploadFile();
+                var jsonData = {};
+
+                //var cspass = $('#password').val();
+                /*jsonData["Id"] = $('#masterId').val();*/
+                jsonData["FirstName"] = $('#firstname').val();
+                jsonData["LastName"] = $('#lastname').val();
+                jsonData["ProfilePic"] = $('#propic').val();
+                jsonData["UserName"] = $('#username').val();
+                jsonData["Email"] = $('#uxrmailx').val();
+                jsonData["Password"] = $('#uxrpassx').val();
+                jsonData["PhoneNumber"] = $('#phone').val();
+                jsonData["Designation"] = $('#designationx').val();
+                jsonData["RoleId"] = "1";
+                jsonData["ActiveAccount"] = "Yes";
+                var urlpath = '@Url.Action("Save_User", "UserRegistration")';
+                $.ajax
+                    ({
+                        data: jsonData,
+                        url: urlpath,
+                        type: "POST",
+                        beforeSend: function () {
+
+                        },
+                        success: function (result) {
+                            debugger;
+                            if (result.UserId != '0') {
+                                 login();
+                            }
+                            else {
+                                alert('Email or Username already exist');
+                            }
+                        },
+                    });
+                }
+
+        }
+        function login()
+        {
+            var url = '@Url.Action("SignIn", "UserLogin")';
+            window.location.href = url;
+        }
+
+    </script>
+
+
+}
